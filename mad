@@ -1,0 +1,91 @@
+import &#39;package:flutter/material.dart&#39;;
+void main() {
+runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+const MyApp({super.key});
+@override
+Widget build(BuildContext context) {
+return MaterialApp(
+title: &#39;Flutter Demo&#39;,
+theme: ThemeData(
+primarySwatch: Colors.deepOrange,
+),
+home: const MyHomePage(title: &#39;Exp2 Flutter Container&#39;),
+);
+}
+}
+class MyHomePage extends StatefulWidget {
+const MyHomePage({super.key, required this.title});
+final String title;
+@override
+State&lt;MyHomePage&gt; createState() =&gt; _MyHomePageState();
+}
+class _MyHomePageState extends State&lt;MyHomePage&gt; {
+@override
+Widget build(BuildContext context) {
+return Scaffold(
+appBar: AppBar(
+title: Text(widget.title),
+),
+body: Column(
+mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+children: [
+Container(
+margin: EdgeInsets.all(20),
+padding: EdgeInsets.all(12),
+decoration: BoxDecoration(
+borderRadius: BorderRadius.circular(8),
+color: Colors.deepOrange
+),
+child: Text(&quot;Mastermind&quot;, style: TextStyle(fontSize: 20,
+fontStyle: FontStyle.italic),),
+),
+Container(
+margin: EdgeInsets.all(20),
+padding: EdgeInsets.all(12),
+decoration: BoxDecoration(
+borderRadius: BorderRadius.circular(8),
+color: Colors.deepOrange
+),
+child: Image.asset(&#39;assets/img/Ram_mandir.jpeg&#39;),
+),
+Container(
+margin: EdgeInsets.all(20),
+padding: EdgeInsets.all(12),
+decoration: BoxDecoration(
+borderRadius: BorderRadius.circular(8),
+color: Colors.deepOrangeAccent
+
+),
+child: Text(&#39;Mad Lab Exp2&#39;,style: TextStyle(fontSize:
+20,fontStyle: FontStyle.italic),),
+)
+],
+),
+);
+}
+}
+
+
+
+
+pubspec.yaml:
+name: exp2_mad
+description: A new Flutter project.
+version: 1.0.0+1
+environment:
+sdk: &#39;&gt;=2.19.4 &lt;3.0.0&#39;
+dependencies:
+flutter:
+sdk: flutter
+cupertino_icons: ^1.0.2
+dev_dependencies:
+flutter_test:
+sdk: flutter
+flutter_lints: ^2.0.0
+flutter:
+uses-material-design: true
+assets:
+- assets/img/Ram_mandir.jpeg
